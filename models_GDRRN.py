@@ -136,7 +136,7 @@ class DnCNN(nn.Module):
 
 class GDRRN(nn.Module):
     def __init__(self, input_chnl_hsi, group=1):
-        super(DRRN, self).__init__()
+        super(GDRRN, self).__init__()
         num_chnl = 128
         self.input = nn.Conv2d(in_channels=input_chnl_hsi, out_channels=num_chnl, kernel_size=3, stride=1, padding=1, bias=False, groups=1)
         self.conv1 = nn.Conv2d(in_channels=num_chnl, out_channels=num_chnl, kernel_size=3, stride=1, padding=1, bias=False, groups=group)
